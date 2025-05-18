@@ -1,0 +1,37 @@
+{
+  "author": "Scott Morgan",
+  "bugs": {
+    "url": "https://github.com/adligo/fab_group.ts.adligo.org/issues"
+  },
+  "description": "This is the implementation of i_log2.ts.adligo.org.",
+  "dependencies": {
+    "typescript": "^5.0.3"
+  },
+  "dependencySrcSLinks": [{
+    "project": "i_log2.ts.adligo.org"
+  }],
+  "devDependencies": {
+    "@types/node": "^18.15.12"
+  },
+  "homepage": "https://github.com/adligo/log2.ts.adligo.org#readme",
+  "keywords": [
+    "log4j",
+    "i_log",
+    "i_log2",
+    "fab",
+    "javascript",
+    "typescript"
+  ],
+  "license": "Apache-2.0",
+  "name": "@log2.ts.adligo.org",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adligo/log2.ts.adligo.org.git"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "runCmd": "npx tsx src/log2-junk.ts"
+  },
+  "type": "module",
+  "version": "0.0.1"
+}
