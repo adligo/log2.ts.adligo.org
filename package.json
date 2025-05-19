@@ -7,9 +7,12 @@
   "dependencies": {
     "typescript": "^5.0.3"
   },
-  "dependencySrcSLinks": [{
-    "project": "i_log2.ts.adligo.org"
-  }],
+  "dependencySrcSLinks": [
+    { "project": "i_io.ts.adligo.org" },
+    { "project": "i_obj.ts.adligo.org"},
+    { "project": "i_strings.ts.adligo.org"},
+    {"project": "i_log2.ts.adligo.org"}
+  ],
   "devDependencies": {
     "@types/node": "^18.15.12"
   },
