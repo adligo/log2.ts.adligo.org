@@ -1,20 +1,18 @@
 {
   "author": "Scott Morgan",
+  "bin": {
+    "log2.mjs": "./dist/log2.mjs",
+    "log2.mts": "./src/log2.mts"
+  },
   "bugs": {
-    "url": "https://github.com/adligo/fab_group.ts.adligo.org/issues"
+    "url": "https://github.com/adligo/log2.ts.adligo.org/issues"
   },
   "description": "This is the implementation of i_log2.ts.adligo.org.",
   "dependencies": {
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.4"
   },
-  "dependencySrcSLinks": [
-    { "project": "i_io.ts.adligo.org" },
-    { "project": "i_obj.ts.adligo.org"},
-    { "project": "i_strings.ts.adligo.org"},
-    {"project": "i_log2.ts.adligo.org"}
-  ],
   "devDependencies": {
-    "@types/node": "^18.15.12"
+    "@types/node": "^22.15.21"
   },
   "homepage": "https://github.com/adligo/log2.ts.adligo.org#readme",
   "keywords": [
@@ -31,7 +29,14 @@
     "type": "git",
     "url": "git+https://github.com/adligo/log2.ts.adligo.org.git"
   },
+  "sharedNodeModuleProjectSLinkEnvVar": [
+    "LOG2_NODE_MODULE_SLINK"
+  ],
+  "sharedNodeModuleProjectSLinks": [
+    "fab_group_deps.ts.adligo.org"
+  ],
   "scripts": {
+    "build": "tsc && slink -p",
     "tsc": "tsc",
     "runCmd": "npx tsx src/log2-junk.ts"
   },
