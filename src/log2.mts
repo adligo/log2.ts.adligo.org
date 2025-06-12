@@ -1,6 +1,7 @@
-import {I_Out} from './i_io.ts.adligo.org@slink/i_io.mts';
-import {I_Console, I_LogCtx, I_LogConfig, I_LogSegment, I_Log, LogLevel, LOGNAME, LEVEL, MESSAGE, DEFAULT_FORMAT } from './i_log2.ts.adligo.org@slink/i_log2.mts';
-//import {I_Console, I_LogCtx, I_LogConfig, I_LogSegment, I_Log } from '@i_log2.ts.adligo.org@slink/i_log2';
+import {I_Out} from '@ts.adligo.org/i_io/dist/i_io.mjs';
+import {I_Console, I_LogCtx, I_LogConfig, I_LogSegment, I_Log, LogLevel, LOGNAME, LEVEL, MESSAGE, DEFAULT_FORMAT } 
+  from '@ts.adligo.org/i_log2/dist/i_log2.mjs';
+
 
 export class ConsoleWrapper implements I_Console {
     theConsole = console;
@@ -209,7 +210,7 @@ export class LogConfig implements I_LogConfig {
                     const logName = key.substring(6);
                     const level = this.parseLevel(value);
                     if (level !== undefined) {
-                        this.levels[logName] = level;
+                        this.levels.set(logName,level);
                     }
                 }
             }
@@ -253,7 +254,7 @@ export class LogConfig implements I_LogConfig {
             this.log.debug('LogConfig getLevel for ' + logName + ' is ' + r);
             this.log.debug('LogConfig levels are ' + JSON.stringify(this.levels));
         }
-        var r: LogLevel | undefined = this.levels[logName]; 
+        var r: LogLevel | undefined = this.levels.get(logName); 
         if (this.log != undefined && this.log.isDebug()) {
             this.log.debug("LogConfig getLevel for '" + logName + "' is " + r);
         } else {
