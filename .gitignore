@@ -23,6 +23,8 @@
 hs_err_pid*
 replay_pid*
 /bin/
+/bin
+/bin/*
 /.classpath
 /dist/
 /dist
